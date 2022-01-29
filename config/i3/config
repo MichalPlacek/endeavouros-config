@@ -53,10 +53,6 @@ new_window pixel 1
 # thin borders
 # hide_edge_borders both
 
-# Set inner/outer gaps
-gaps inner 6
-gaps outer 3
-
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
 
@@ -294,11 +290,11 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -313,20 +309,6 @@ set $ws10 "10"
 #workspace $ws3 output HDMI-0
 #workspace $ws4 output HDMI-0
 #workspace $ws5 output HDMI-0
-
-# bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
-assign [class="(?i)firefox"] $ws2
-assign [class="Thunar"] $ws3
-assign [class="Thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
-
-# automatic set focus new window if it opens on another workspace then the current:
-for_window [class=Xfce4-terminal] focus
-for_window [class=(?i)firefox] focus
-for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
 
 ##############
 # compositor #
